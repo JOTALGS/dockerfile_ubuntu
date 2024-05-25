@@ -4,13 +4,14 @@
 + Clone el repo en una carpeta
 + Abrir consola de comandos y ubicarse en la carpeta del repo
 
++ __importante__: el segundo argumento que recibe la fincion docker build es el path del archivo Dokerfile. Por eso situarse en la carpeta del archivo y poner '.' como el path.
 ```
 docker build -t <image_name> .
 ```
 + puedes elegir cualquier __<image_name>__ este sera el nombre de la imagen que vas a crear
 
 ```
-docker run -it --name=<container_name> <image_name>
+docker run -it -p 3000:3000 --name=<container_name> <image_name>
 ```
 + puedes elegir cualquier __<container_name>__ y el __<image_name>__ debe ser el mismo de la imagen que creaste
 + El contenedor deberia iniciarce automaticamente
@@ -18,5 +19,5 @@ docker run -it --name=<container_name> <image_name>
 docker start <container_name>
 ```
 ```
-docker run -it <container_name> /bin/bash
+docker exec -it <container_name> /bin/bash
 ```
