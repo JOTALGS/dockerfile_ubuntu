@@ -14,7 +14,6 @@ RUN apt-get install -y nodejs
 RUN apt-get install -y \
     sudo \
     python3 \
-    python3.10-venv \
     python3-pip \
     git \
     bash \
@@ -26,6 +25,6 @@ WORKDIR /home
 
 # Expose port 3000 for Next.js
 EXPOSE 3000
-
+EXPOSE 8000
 # Set bash as the default shell
 CMD ["/bin/bash"]

@@ -11,8 +11,8 @@ docker build -t <image_name> .
 + puedes elegir cualquier __<image_name>__ este sera el nombre de la imagen que vas a crear
 
 ```
-docker run -it -p 3000:3000 --name=<container_name> <image_name>
-```
+docker run -it -p 3000:3000 -p 8080:8080 --name=<container_name> <image_name>
+``` 
 + puedes elegir cualquier __<container_name>__ y el __<image_name>__ debe ser el mismo de la imagen que creaste
 + El contenedor deberia iniciarce automaticamente
 ```
