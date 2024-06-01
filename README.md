@@ -21,3 +21,5 @@ docker start <container_name>
 ```
 docker exec -it <container_name> /bin/bash
 ```
+
+run backend server with python3 manage.py runserver 0.0.0.0:8080
