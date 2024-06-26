@@ -22,9 +22,29 @@ RUN apt-get install -y \
 # Set the working directory
 WORKDIR /home
 
+# Clone a GitHub repository
+RUN git clone https://github.com/JOTALGS/holberton-proyectoFinal.git
+
+# Set the working directory to the backend folder inside the cloned repository
+WORKDIR /home/holberton-proyectoFinal/backend
+
+# Install Python dependencies
+RUN pip install -r requeriments.txt
+
+# Set the working directory to the frontend folder inside the cloned repository
+WORKDIR /home/holberton-proyectoFinal/frontend
+
+# Install NPM dependencies
+RUN npm install
+
+RUN npm install next@latest react@latest react-dom@latest
+
+# Set the working directory
+WORKDIR /home
 
 # Expose port 3000 for Next.js
 EXPOSE 3000
 EXPOSE 8000
+
 # Set bash as the default shell
 CMD ["/bin/bash"]
